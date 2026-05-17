@@ -1,0 +1,29 @@
+
+RENDER DEPLOYMENT SETTINGS
+
+Environment:
+Python
+
+Root Directory:
+backend
+
+Build Command:
+pip install -r requirements.txt
+
+Start Command:
+uvicorn main:app --host 0.0.0.0 --port $PORT
+
+Health Check:
+https://your-app-name.onrender.com/api/health
+
+Analyze Endpoint:
+https://your-app-name.onrender.com/api/analyze
+
+Request Format:
+Content-Type: multipart/form-data
+
+Field name:
+image
+
+Flutter should send image using field name:
+image
